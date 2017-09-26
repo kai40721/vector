@@ -1,7 +1,14 @@
 class Vector
+  attr_accessor :x , :y
+
   def initialize(a, b)
     @x = a;
     @y = b;
+  end
+
+  def add(v)
+    ans = Vector.new(v.x+@x,v.y+@y)
+    return ans
   end
 
   def to_s
